@@ -48,6 +48,7 @@ public class GameLogic : MonoBehaviour {
 			if (showPointIndex == 2) {
 				foreach (GameObject fallingPiece in fallingPieces) {
 					fallingPiece.GetComponent<Rigidbody> ().useGravity = true;
+					fallingPiece.SetActive (true);
 				}
 			}
 
