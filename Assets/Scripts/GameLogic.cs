@@ -12,6 +12,9 @@ public class GameLogic : MonoBehaviour {
 	public GameObject startPoint;
 	public GameObject[] showPoints;
 
+	public GameObject pieceFallActivationShowPoint;
+	public GameObject[] fallingPieces;
+
 	private uint showPointIndex = 0;
 
 	// Use this for initialization
@@ -41,6 +44,12 @@ public class GameLogic : MonoBehaviour {
 					"oncompletetarget", this.gameObject
 				)
 			);
+
+			if (showPointIndex == 2) {
+				foreach (GameObject fallingPiece in fallingPieces) {
+					fallingPiece.GetComponent<Rigidbody> ().useGravity = true;
+				}
+			}
 
 			showPointIndex++;
 		}
