@@ -938,6 +938,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012699876, y: 0.021922743, z: 0.0001}
   m_Center: {x: -0.00005088687, y: 0.000026645668, z: 0.008}
+--- !u!1001 &201282090
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 289983493}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06999979
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.613
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &235683049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,10 +1268,52 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.11, y: 0.07, z: 1.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 299631442}
   m_Father: {fileID: 790716275}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &299631441 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+  m_PrefabInternal: {fileID: 201282090}
+--- !u!4 &299631442 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 529891a3e61cbc040b64d23184f9bda5, type: 3}
+  m_PrefabInternal: {fileID: 201282090}
+--- !u!114 &299631443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 299631441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  sourceClip: {fileID: 8300000, guid: 6b6fcfe66eaa019419e6de60d72817b3, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!1001 &337860671
 Prefab:
   m_ObjectHideFlags: 0
@@ -3919,6 +4019,7 @@ MonoBehaviour:
   - {fileID: 1673561680}
   finalCheese: {fileID: 157208634}
   levelCompleteAudioSource: {fileID: 157208638}
+  levelFailedAudioSource: {fileID: 299631443}
 --- !u!4 &1053302433
 Transform:
   m_ObjectHideFlags: 0

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour {
+	enum ChoosenPath{
+		red,
+		blue
+	};
 	public float movementSpeed = 2;
 	public float rotationTime = 5;
 
@@ -20,6 +24,9 @@ public class GameLogic : MonoBehaviour {
 
 	public GameObject finalCheese;
 	public GvrAudioSource levelCompleteAudioSource;
+	public GvrAudioSource levelFailedAudioSource;
+
+	ChoosenPath choosenPath;
 
 	private uint showPointIndex = 0;
 
@@ -31,12 +38,14 @@ public class GameLogic : MonoBehaviour {
 	public void StartBluePath()
 	{
 		showPoints = blueShowPoints;
+		choosenPath = ChoosenPath.blue;
 		MoveToNextPoint ();
 	}
 
 	public void StartRedPath()
 	{
 		showPoints = redShowPoints;
+		choosenPath = ChoosenPath.red;
 		MoveToNextPoint ();
 	}
 
@@ -66,7 +75,11 @@ public class GameLogic : MonoBehaviour {
 
 			showPointIndex++;
 		} else {
-			levelCompleteAudioSource.Play ();
+			if (choosenPath == ChoosenPath.blue) {
+				levelCompleteAudioSource.Play ();
+			} else {
+				levelFailedAudioSource.Play ();
+			}
 		}
 	}
 
