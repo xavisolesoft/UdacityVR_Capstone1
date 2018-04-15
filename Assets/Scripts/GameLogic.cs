@@ -16,6 +16,8 @@ public class GameLogic : MonoBehaviour {
 	public GameObject pieceFallActivationShowPoint;
 	public GameObject[] fallingPieces;
 
+	public GameObject finalCheese;
+
 	private uint showPointIndex = 0;
 
 	// Use this for initialization
@@ -64,6 +66,8 @@ public class GameLogic : MonoBehaviour {
 
 	public void cheeseClicked()
 	{
-		SceneManager.LoadScene ("MiceVideo");
+		if (player.transform.position == showPoints[showPoints.Length-1].transform.position) {
+			SceneManager.LoadScene ("MiceEatingCheeseVideo");
+		}
 	}
 }
