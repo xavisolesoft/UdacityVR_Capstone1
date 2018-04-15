@@ -44,7 +44,13 @@ SubShader {
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.texcoord);
+            	fixed4 col = (0,0,0,0);
+            	if(i.texcoord.x >= 0.2 && i.texcoord.x <= 0.8 &&
+            	  		i.texcoord.y >= 0.2 && i.texcoord.y <= 0.8){
+
+            		i.texcoord.y = i.texcoord.y - 0.1;
+                	col = tex2D(_MainTex, i.texcoord);
+               	}
                 return col;
             }
         ENDCG
