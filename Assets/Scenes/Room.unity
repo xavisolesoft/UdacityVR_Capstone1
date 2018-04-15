@@ -4952,6 +4952,7 @@ GameObject:
   - component: {fileID: 1476717316}
   - component: {fileID: 1476717318}
   - component: {fileID: 1476717317}
+  - component: {fileID: 1476717319}
   m_Layer: 0
   m_Name: Floor_Lamp
   m_TagString: Untagged
@@ -5015,6 +5016,39 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476717315}
   m_Mesh: {fileID: 4300076, guid: fb0f1657f78a242668dc54236d165f3c, type: 3}
+--- !u!114 &1476717319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476717315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 1
+  sourceClip: {fileID: 8300000, guid: b1e39749d34ee6f4fa9262986fb9ec08, type: 3}
+  sourceLoop: 1
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!1 &1499355709
 GameObject:
   m_ObjectHideFlags: 0

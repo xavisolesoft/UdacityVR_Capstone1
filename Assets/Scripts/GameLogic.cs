@@ -67,7 +67,7 @@ public class GameLogic : MonoBehaviour {
 	public void cheeseClicked()
 	{
 		if (player.transform.position == showPoints[showPoints.Length-1].transform.position) {
-			SceneManager.LoadScene ("MiceEatingCheeseVideo");
+			SceneManager.LoadScene (1);
 		}
 	}
 }
