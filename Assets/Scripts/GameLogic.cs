@@ -11,6 +11,9 @@ public class GameLogic : MonoBehaviour {
 	public float movementSpeed = 2;
 	public float rotationTime = 5;
 
+	public GameObject blueSphere;
+	public GameObject redSphere;
+
 	public GameObject player;
 	public GameObject startUI;
 	public GameObject restartUI;
@@ -26,6 +29,10 @@ public class GameLogic : MonoBehaviour {
 	public GvrAudioSource levelCompleteAudioSource;
 	public GvrAudioSource levelFailedAudioSource;
 
+	public GameObject lifeObject;
+	private bool timeToLifeCounterActive = false;
+	private float timeToLifeCounter;
+
 	ChoosenPath choosenPath;
 
 	private uint showPointIndex = 0;
@@ -33,12 +40,28 @@ public class GameLogic : MonoBehaviour {
 	void Start () {
 		player.transform.position = startPoint.transform.position;
 		player.transform.rotation = startPoint.transform.rotation;
+
+		timeToLifeCounterActive = false;
+		timeToLifeCounter = 0.0f;
+	}
+
+	void Update(){
+		if (timeToLifeCounterActive) {
+			timeToLifeCounter += Time.deltaTime;
+			if (timeToLifeCounter >= 4.0f) {
+				lifeObject.SetActive (true);
+				timeToLifeCounterActive = false;
+				timeToLifeCounter = 0.0f;
+			}
+		}
 	}
 
 	public void StartBluePath()
 	{
 		showPoints = blueShowPoints;
 		choosenPath = ChoosenPath.blue;
+		blueSphere.SetActive (false);
+		redSphere.SetActive (false);
 		MoveToNextPoint ();
 	}
 
@@ -46,6 +69,8 @@ public class GameLogic : MonoBehaviour {
 	{
 		showPoints = redShowPoints;
 		choosenPath = ChoosenPath.red;
+		blueSphere.SetActive (false);
+		redSphere.SetActive (false);
 		MoveToNextPoint ();
 	}
 
@@ -79,6 +104,8 @@ public class GameLogic : MonoBehaviour {
 				levelCompleteAudioSource.Play ();
 			} else {
 				levelFailedAudioSource.Play ();
+				timeToLifeCounterActive = true;
+				timeToLifeCounter = 0.0f;
 			}
 		}
 	}
@@ -86,6 +113,11 @@ public class GameLogic : MonoBehaviour {
 	private void MoveToNextPointComplete()
 	{
 		MoveToNextPoint ();
+	}
+
+	public void lifeClicked ()
+	{
+		SceneManager.LoadScene (0);
 	}
 
 	public void cheeseClicked()
