@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 5109496cc6749a04eba100a674111e3e,
+  m_LightingDataAsset: {fileID: 112000002, guid: efd4ccc1c3df5a049a6a8eae0e8e087f,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -5393,6 +5393,7 @@ MonoBehaviour:
   startPoint: {fileID: 2017659654}
   blueShowPoints:
   - {fileID: 611522305}
+  - {fileID: 348406438}
   - {fileID: 940779222}
   - {fileID: 2066255866}
   - {fileID: 884423162}
