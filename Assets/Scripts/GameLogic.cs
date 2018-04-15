@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour {
 	public float movementSpeed = 2;
@@ -59,5 +60,10 @@ public class GameLogic : MonoBehaviour {
 	public void MoveToNextPointComplete()
 	{
 		MoveToNextPoint ();
+	}
+
+	public void cheeseClicked()
+	{
+		SceneManager.LoadScene ("MiceVideo");
 	}
 }
