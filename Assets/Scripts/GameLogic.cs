@@ -17,6 +17,7 @@ public class GameLogic : MonoBehaviour {
 	public GameObject[] fallingPieces;
 
 	public GameObject finalCheese;
+	public GvrAudioSource levelCompleteAudioSource;
 
 	private uint showPointIndex = 0;
 
@@ -36,12 +37,12 @@ public class GameLogic : MonoBehaviour {
 		if (showPointIndex < showPoints.Length) {
 			Vector3 nextPoint = showPoints [showPointIndex].transform.position;
 			float distance = Vector3.Distance (player.transform.position, nextPoint);
-			iTween.MoveTo(player, 
-				iTween.Hash(
-					"position", showPoints[showPointIndex].transform.position,
+			iTween.MoveTo (player, 
+				iTween.Hash (
+					"position", showPoints [showPointIndex].transform.position,
 					"orienttopath", true,
 					"lookTime", rotationTime,
-					"time", distance/movementSpeed, 
+					"time", distance / movementSpeed, 
 					"easetype", "linear",
 					"oncomplete", "MoveToNextPointComplete",
 					"oncompletetarget", this.gameObject
@@ -56,6 +57,8 @@ public class GameLogic : MonoBehaviour {
 			}
 
 			showPointIndex++;
+		} else {
+			levelCompleteAudioSource.Play ();
 		}
 	}
 

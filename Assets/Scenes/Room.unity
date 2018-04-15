@@ -756,8 +756,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6352453, z: 4.062741}
-  m_Center: {x: -0.00000028233103, y: 0.069048375, z: 0.6088574}
+  m_Size: {x: 2.0488863, y: 1.6352453, z: 3.7124753}
+  m_Center: {x: 0.010089621, y: 0.069048405, z: 0.7839907}
 --- !u!114 &157208636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,6 +803,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &157208638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157208634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  sourceClip: {fileID: 8300000, guid: 9ebc2fb084cee804badcfa104f02991c, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!1 &174151067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,6 +3757,7 @@ MonoBehaviour:
   - {fileID: 699604103}
   - {fileID: 1673561680}
   finalCheese: {fileID: 157208634}
+  levelCompleteAudioSource: {fileID: 157208638}
 --- !u!4 &1053302433
 Transform:
   m_ObjectHideFlags: 0
@@ -5678,7 +5712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bypassRoomEffects: 0
+  bypassRoomEffects: 1
   directivityAlpha: 0
   directivitySharpness: 1
   listenerDirectivityAlpha: 0
@@ -5686,8 +5720,8 @@ MonoBehaviour:
   gainDb: 0
   occlusionEnabled: 0
   playOnAwake: 1
-  sourceClip: {fileID: 0}
-  sourceLoop: 0
+  sourceClip: {fileID: 8300000, guid: 0a45d2f4e6679664dadababe0f6a3b62, type: 3}
+  sourceLoop: 1
   sourceMute: 0
   sourcePitch: 1
   sourcePriority: 128
