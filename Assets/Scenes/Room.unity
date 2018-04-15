@@ -2260,6 +2260,8 @@ GameObject:
   - component: {fileID: 699604108}
   - component: {fileID: 699604105}
   - component: {fileID: 699604106}
+  - component: {fileID: 699604107}
+  - component: {fileID: 699604110}
   m_Layer: 0
   m_Name: O (4)
   m_TagString: Untagged
@@ -2307,6 +2309,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0019615807, y: 0.0019615698, z: 0.00040000043}
   m_Center: {x: 3.509337e-10, y: 0.0000000026757685, z: -0.000059865743}
+--- !u!114 &699604107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699604103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  sourceClip: {fileID: 8300000, guid: 0796cdbe1ebd65743afeabe677b6593c, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!23 &699604108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2350,6 +2385,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 699604103}
   m_Mesh: {fileID: 4300044, guid: fb0f1657f78a242668dc54236d165f3c, type: 3}
+--- !u!114 &699604110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699604103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507ffce1896f3ca428c12008b11ee377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 699604107}
 --- !u!1 &729747037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3784,6 +3831,7 @@ GameObject:
   - component: {fileID: 1169339519}
   - component: {fileID: 1169339523}
   - component: {fileID: 1169339518}
+  - component: {fileID: 1169339520}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3809,6 +3857,13 @@ MonoBehaviour:
   quality: 2
 --- !u!124 &1169339519
 Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169339517}
+  m_Enabled: 1
+--- !u!81 &1169339520
+AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5551,6 +5606,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1632848225}
+  - component: {fileID: 1632848226}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -5577,6 +5633,39 @@ Transform:
   m_Father: {fileID: 378454193}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: -90.619, z: 0}
+--- !u!114 &1632848226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632848224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 1
+  sourceClip: {fileID: 0}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!1 &1664187117 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 177758, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
@@ -5666,6 +5755,8 @@ GameObject:
   - component: {fileID: 1673561684}
   - component: {fileID: 1673561683}
   - component: {fileID: 1673561682}
+  - component: {fileID: 1673561686}
+  - component: {fileID: 1673561687}
   m_Layer: 0
   m_Name: X (3)
   m_TagString: Untagged
@@ -5756,6 +5847,51 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673561680}
   m_Mesh: {fileID: 4300050, guid: fb0f1657f78a242668dc54236d165f3c, type: 3}
+--- !u!114 &1673561686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1673561680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  listenerDirectivityAlpha: 0
+  listenerDirectivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  sourceClip: {fileID: 8300000, guid: 0796cdbe1ebd65743afeabe677b6593c, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceSpatialBlend: 1
+  sourceDopplerLevel: 1
+  sourceSpread: 0
+  sourceVolume: 1
+  sourceRolloffMode: 0
+  sourceMaxDistance: 500
+  sourceMinDistance: 1
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
+--- !u!114 &1673561687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1673561680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507ffce1896f3ca428c12008b11ee377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1673561686}
 --- !u!1001 &1685291490
 Prefab:
   m_ObjectHideFlags: 0
