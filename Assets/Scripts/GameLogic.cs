@@ -11,7 +11,9 @@ public class GameLogic : MonoBehaviour {
 	public GameObject startUI;
 	public GameObject restartUI;
 	public GameObject startPoint;
-	public GameObject[] showPoints;
+	public GameObject[] blueShowPoints;
+	public GameObject[] redShowPoints;
+	private GameObject[] showPoints;
 
 	public GameObject pieceFallActivationShowPoint;
 	public GameObject[] fallingPieces;
@@ -21,18 +23,24 @@ public class GameLogic : MonoBehaviour {
 
 	private uint showPointIndex = 0;
 
-	// Use this for initialization
 	void Start () {
 		player.transform.position = startPoint.transform.position;
-		MoveToNextPoint ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		player.transform.rotation = startPoint.transform.rotation;
 	}
 
-	public void MoveToNextPoint()
+	public void StartBluePath()
+	{
+		showPoints = blueShowPoints;
+		MoveToNextPoint ();
+	}
+
+	public void StartRedPath()
+	{
+		showPoints = redShowPoints;
+		MoveToNextPoint ();
+	}
+
+	private void MoveToNextPoint()
 	{
 		if (showPointIndex < showPoints.Length) {
 			Vector3 nextPoint = showPoints [showPointIndex].transform.position;
@@ -62,7 +70,7 @@ public class GameLogic : MonoBehaviour {
 		}
 	}
 
-	public void MoveToNextPointComplete()
+	private void MoveToNextPointComplete()
 	{
 		MoveToNextPoint ();
 	}
