@@ -12,6 +12,12 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 
 [Find "PreProductionScoping.md" file in the same folder as "README.md file."](PreProductionScoping.md).
 
+## Videos
+
+[Game play video.](https://youtu.be/BaRmO1hjYMo)
+
+[Achievements video.](https://youtu.be/XzbZdYTkqCg)
+
 ## Achievements
 
 ### Fundamentals
@@ -40,6 +46,8 @@ At the end of the game a video with a mice eating cheese is showed.
 
 ### Completeness
 
+Total 500 points.
+
 #### Alternative Storyline achievement 
 
 The player can choose from two different paths clicking red or blue spheres at the beginning of the simulation.
@@ -55,6 +63,8 @@ The application have some familiar objects like:
 - Green sphere to go through the safe path.
 
 ### Challenges
+
+Total 500 points.
 
 #### Compute Shader achievement
 
