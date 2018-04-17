@@ -1,5 +1,0 @@
-# Achievements
-
-## Fundamentals
-
-### Scale achievement 
