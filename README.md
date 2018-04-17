@@ -20,7 +20,9 @@ The GitHub link with the unity project and the build:
 
 ## Videos
 
-[Game play video.](https://youtu.be/BaRmO1hjYMo)
+[Game play video (on device).](https://www.youtube.com/watch?v=GbLtI_Lubow)
+
+[Game play video (on Unity Editor).](https://youtu.be/BaRmO1hjYMo)
 
 [Achievements video.](https://youtu.be/XzbZdYTkqCg)
 
