@@ -8,6 +8,12 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 - [GVR Unity SDK v1.70.0](https://github.com/googlevr/gvr-unity-sdk/releases)
 - [iTween v2.0.8](https://assetstore.unity.com/packages/tools/animation/itween-84)
 
+## GitHub
+
+The GitHub link with the unity project and the build:
+
+[GitHub Link.](https://github.com/xavisolesoft/UdacityVR_Capstone1)
+
 ## Pre-Production Document
 
 [Find "PreProductionScoping.md" file in the same folder as "README.md file."](PreProductionScoping.md).
